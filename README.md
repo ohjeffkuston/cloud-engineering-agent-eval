@@ -62,3 +62,7 @@ Reference fixes and expected invariants are ready for human review. The bundled
 tests are checker tests. No live model-comparison results are included.
 
 [Terraform JSON syntax](https://developer.hashicorp.com/terraform/language/syntax/json) · [AWS S3 IAM policy examples](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_examples_s3_rw-bucket.html) · [Kubernetes readiness probes](https://kubernetes.io/docs/concepts/workloads/pods/probes/)
+
+## License
+
+The original project code, tasks, reference solutions, and documentation are available under the [MIT License](LICENSE).

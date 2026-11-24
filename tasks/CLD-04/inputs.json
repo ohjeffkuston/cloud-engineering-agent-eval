@@ -1,0 +1,28 @@
+{
+  "states": [
+    {
+      "name": "starting",
+      "http": {
+        "/livez": 200,
+        "/readyz": 503
+      },
+      "ready": false
+    },
+    {
+      "name": "serving",
+      "http": {
+        "/livez": 200,
+        "/readyz": 200
+      },
+      "ready": true
+    },
+    {
+      "name": "dependency unavailable",
+      "http": {
+        "/livez": 200,
+        "/readyz": 503
+      },
+      "ready": false
+    }
+  ]
+}

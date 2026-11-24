@@ -1,0 +1,53 @@
+{
+  "apiVersion": "apps/v1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "orders",
+    "namespace": "shop"
+  },
+  "spec": {
+    "replicas": 2,
+    "selector": {
+      "matchLabels": {
+        "app": "orders",
+        "track": "stable"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "orders",
+          "track": "stable"
+        }
+      },
+      "spec": {
+        "containers": [
+          {
+            "name": "orders",
+            "image": "example.invalid/orders:fixture",
+            "ports": [
+              {
+                "name": "http",
+                "containerPort": 8080
+              }
+            ],
+            "livenessProbe": {
+              "httpGet": {
+                "path": "/livez",
+                "port": "http"
+              },
+              "periodSeconds": 10
+            },
+            "readinessProbe": {
+              "httpGet": {
+                "path": "/livez",
+                "port": "http"
+              },
+              "periodSeconds": 5
+            }
+          }
+        ]
+      }
+    }
+  }
+}

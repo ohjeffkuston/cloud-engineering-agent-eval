@@ -1,0 +1,14 @@
+{
+  "fixed_cost_usd": 90,
+  "cost_per_replica_usd": 72,
+  "cost_per_retention_day_usd": 5,
+  "max_cost_usd": 420,
+  "replica_capacity_rps": 120,
+  "unavailable_replicas": 1,
+  "min_retention_days": 7,
+  "peak_scenarios_rps": [
+    290,
+    330,
+    360
+  ]
+}

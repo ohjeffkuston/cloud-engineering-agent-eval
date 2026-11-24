@@ -1,0 +1,24 @@
+{
+  "terraform": {
+    "required_version": ">= 1.6.0"
+  },
+  "locals": {
+    "service": "orders",
+    "environment": "staging"
+  },
+  "resource": {
+    "terraform_data": {
+      "service_settings": {
+        "input": {
+          "service": "${local.service}",
+          "environment": "${local.environment}"
+        }
+      }
+    }
+  },
+  "output": {
+    "service_settings": {
+      "value": "${terraform_data.service_configs.output}"
+    }
+  }
+}
